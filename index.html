@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>函館市電</title>
+<link rel="stylesheet" href="common/css/style.css">
+<link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css" media="screen">
+<link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css" media="screen">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="slick-1.6.0/slick/slick.min.js"></script>
+<script type="text/javascript">
+
+<!--
+
+function keisan(){
+
+	// 出発駅
+	var station1 = document.form1.station1.options[document.form1.station1.selectedIndex].value;
+
+	// 到着駅
+	var station2 = document.form1.station2.options[document.form1.station2.selectedIndex].value;
+
+	// 距離を計算
+	var distance = Math.abs(parseInt(station1) - parseInt(station2))/10;
+	distance=distance.toFixed(1);
+	document.form1.field_distance.value = distance+" Km";
+
+	//乗車料金を計算
+    var fare1;
+	if(distance>0&&distance<=2.0){
+		fare1=210;
+	}else if(distance>2.0&&distance<=4.0){
+		fare1=230;
+	}else if(distance>4.0&&distance<=7.0){
+		fare1=240;
+	}else if(distance>7.0&&distance<=9.0){
+		fare1=250;
+	}else{
+        fare1=0;
+
+		 }
+document.form1.field_fare1.value = fare1+" 円";
+
+	// 所用時間を計算
+	var time=distance*285/60;
+	time=time.toFixed(0);
+	document.form1.field_time.value = time+" 分";
+}
+
+// -->
+</script>
+</head>
+<body>
+<div id="pagebody">
+  <header id="pageHead">
+    <h1 class="logo"><a href=index.html><img src="images/ダウンロード.png" alt="函館市電"　width=90 height=90></a></h1>
+    <a href="index.html"><p class="Title">函館市電</p></a>
+    <form id="goo" method="get" action="http://www.google.co.jp/search">
+      <input type="hidden" name="ie" value="utf-8">
+      <input type="hidden" name="oe" value="utf-8">
+      <input type="hidden" name="domains" value="index.html">
+      <input class="search1" type="text" size="25" maxlength="100" name="q">
+      <input class="search2" type="submit" name="btnG" value="検索">
+      <br>
+      <input type="hidden" checkedname="sitesearch" value="index.html">
+      <br>
+    </form>
+    <p class="map"><a href="index.html">サイトマップ</a></p>
+    <p class="info"><a href="index.html">お問い合わせ</a></p>
+    <div id="globalnavi">
+      <ul id="fade-in2" class="dropmenu">
+        <li><a href="index.html">TOP</a> </li>
+        <li><a href="navi/路線.html">路線・時刻・料金</a>
+          <ul>
+            <li><a href="navi/路線案内.html">路線案内</a></li>
+            <li><a href="navi/運行時刻.html">運行時刻</a></li>
+            <li><a href="navi/料金.html">乗車料金</a></li>
+          </ul>
+        </li>
+        <li><a href="navi/利用.html">ご利用方法</a>
+          <ul>
+            <li><a href="navi/ご利用案内.html">ご利用案内</a></li>
+            <li><a href="navi/ICカード.html">ICカード</a></li>
+            <li><a href="navi/乗換・乗継.html">乗換・乗継</a></li>
+            <li><a href="navi/乗車券.html">乗車券・定期券</a></li>
+          </ul>
+        </li>
+        <li><a href="navi/広告.html">広告・グッズ</a>
+          <ul>
+            <li><a href="navi/広告掲載.html">広告掲載</a></li>
+            <li><a href="navi/オリジナルグッズ.html">オリジナルグッズ</a></li>
+            <li><a href="navi/市電の意匠使用.html">市電の意匠使用</a></li>
+            <li><a href="navi/映画・ドラマ・CM.html">映画・ドラマ・CMの撮影許可</a></li>
+          </ul>
+        </li>
+        <li><a href="navi/営業.html">営業のご案内</a>
+          <ul>
+            <li><a href="#">忘れ物のお問い合わせ</a></li>
+            <li><a href="#">ドライバーの皆様へ</a></li>
+            <li><a href="#">イベントのお知らせ</a></li>
+          </ul>
+        </li>
+        <li><a href="navi/市電について.html">函館市電について</a>
+          <ul>
+            <li><a href="#">函館市電のあゆみ</a></li>
+            <li><a href="#">車両のご案内</a></li>
+            <li><a href="#">フォトギャラリー</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div id="Body">
+    <div id="slider">
+      <!-- ↓スライダー本体 -->
+      <ul class="thumb-item">
+        <li><a href="#"><img src="images/函館NAVI.png" width="800" height="360"></a></li>
+        <li><a href="#"><img src="images/スペシャルチケット.jpg" width="800" height="360"></a></li>
+        <li><a href="#"><img src="images/イカスニモカ.jpg" width="800" height="360"></a></li>
+        <li><a href="#"><img src="images/感謝祭.jpg" width="800" height="360"></a></li>
+      </ul>
+      <!-- ↓サムネイル -->
+      <ul class="thumb-item-nav">
+        <li><a href="#"><img src="images/函館NAVI.png" width="190" height="80"></a></li>
+        <li><a href="#"><img src="images/スペシャルチケット.jpg" width="190" height="80"></a></li>
+        <li><a href="#"><img src="images/イカスニモカ.jpg" width="190" height="80"></a></li>
+        <li><a href="#"><img src="images/感謝祭.jpg" width="190" height="80"></a></li>
+      </ul>
+      <script type="text/javascript" >
+	$(document).ready(function(){
+     $('.thumb-item').slick({
+		 accessibility: true,
+  autoplay: true,
+  autoplaySpeed: 6000,
+		  speed: 1500,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.thumb-item-nav' //サムネイルのクラス名
+     });
+     $('.thumb-item-nav').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          asNavFor: '.thumb-item', //スライダー本体のクラス名
+          focusOnSelect: true,
+     });
+});
+	</script>
+    </div>
+    <div id="search">
+      <p id="money">時刻・料金検索</p>
+      <form action="#" name="form1">
+        <div class="form__item">
+          <p>出発駅
+            <select class="select1" name="station1" onChange="keisan()">
+              <option value="-1000">出発駅を選択</option>
+              <option value="0">湯の川</option>
+              <option value="5">湯の川温泉</option>
+              <option value="8">函館アリーナ前</option>
+              <option value="10">駒場車庫前</option>
+              <option value="13">競馬場前</option>
+              <option value="18">深堀町</option>
+              <option value="23">柏木町</option>
+              <option value="29">杉並町</option>
+              <option value="35">五稜郭公園前</option>
+              <option value="38">中央病院前</option>
+              <option value="41">千代台</option>
+              <option value="47">堀川町</option>
+              <option value="50">昭和橋</option>
+              <option value="53">千歳町</option>
+              <option value="56">新川町</option>
+              <option value="60">松風町</option>
+              <option value="65">函館駅前</option>
+              <option value="69">市役所前</option>
+              <option value="73">魚市場通</option>
+              <option value="78">十字街</option>
+              <option value="82">宝来町</option>
+              <option value="88">青柳町</option>
+              <option value="92">谷地頭</option>
+              <option value="84">末広町</option>
+              <option value="88">大町</option>
+              <option value="93">函館どつく前</option>
+            </select>
+          </p>
+        </div>
+        <div class="form__item">
+          <p>到着駅
+            <select class="select1" name="station2" onChange="keisan()">
+              <option value="-1000">到着駅を選択</option>
+              <option value="0">湯の川</option>
+              <option value="5">湯の川温泉</option>
+              <option value="8">函館アリーナ前</option>
+              <option value="10">駒場車庫前</option>
+              <option value="13">競馬場前</option>
+              <option value="18">深堀町</option>
+              <option value="23">柏木町</option>
+              <option value="29">杉並町</option>
+              <option value="35">五稜郭公園前</option>
+              <option value="38">中央病院前</option>
+              <option value="41">千代台</option>
+              <option value="47">堀川町</option>
+              <option value="50">昭和橋</option>
+              <option value="53">千歳町</option>
+              <option value="56">新川町</option>
+              <option value="60">松風町</option>
+              <option value="65">函館駅前</option>
+              <option value="69">市役所前</option>
+              <option value="73">魚市場通</option>
+              <option value="78">十字街</option>
+              <option value="82">宝来町</option>
+              <option value="88">青柳町</option>
+              <option value="92">谷地頭</option>
+              <option value="84">末広町</option>
+              <option value="88">大町</option>
+              <option value="93">函館どつく前</option>
+            </select>
+          </p>
+        </div>
+        <div class="result">
+          <p>料金
+            <output class="fare" type="text" name="field_fare1" size="8" value="0">
+            円
+        </div>
+        <div class="result">
+          <p>所要時間
+            <output class="fare" type="text" name="field_time" size="8" value="0">
+            分 </p>
+        </div>
+        <div class="result">
+          <p>距離
+            <output class="fare" type="text" name="field_distance" size="8" value="0">
+            Km </p>
+        </div>
+      </form>
+    </div>
+    <div id="new">
+      <ul class="tab">
+        <li class="select">新着情報</li>
+        <li>企画部</li>
+        <li>企業局管理部</li>
+        <li>企業局交通部</li>
+      </ul>
+      <ul class="content">
+        <li>
+          <ul>
+            <li>
+              <p>2017年7月26日 <a href="index.html">函館港まつり期間中の市電の運行について</a></p>
+            </li>
+            <li>
+              <p>2017年7月24日 <a href="index.html">函館港まつり期間中の花電車の運行について</a></p>
+            </li>
+            <li>
+              <p>2017年7月18日 <a href="index.html">「路面電車感謝祭」開催のお知らせについて</a></p>
+            </li>
+            <li>
+              <p>2017年7月4日 <a href="index.html">平成２９年度　カラオケビール電車「サッポロ生ビール号」運行開始</a></p>
+            </li>
+            <li>
+              <p>2017年6月28日 <a href="index.html">企業局の広報紙</a></p>
+            </li>
+            <li>
+              <p>2017年6月23日 <a href="index.html">2017函館マラソン開催当日の市電の運行について</a></p>
+            </li>
+            <li>
+              <p>2017年4月6日 <a href="index.html">お得な乗車券（函館市電）</a></p>
+            </li>
+            <li>
+              <p>2017年3月28日 <a href="index.html">函館市交通事業経営ビジョン</a></p>
+            </li>
+            <li>
+              <p>2017年3月28日 <a href="index.html">「函館市交通事業経営ビジョン（原案）」に対するパブリックコメント（意見公募）手続の実施について（募集期間：平成29年2月7日～3月9日＜募集期間終了しました＞）</a></p>
+            </li>
+            <li>
+              <p>2017年2月15日 <a href="index.html">｢公立高等学校入学者選抜学力検査｣を受験する皆様へ</a></p>
+            </li>
+            <li>
+              <p>2017年2月7日 <a href="index.html">地域公共交通確保維持改善事業について</a></p>
+            </li>
+            <li>
+              <p>2016年12月16日 <a href="index.html">ICカード利用のお知らせ</a></p>
+            </li>
+            <li>
+              <p>2016年11月12日 <a href="index.html">新「中央病院前電停」供用開始のお知らせ</a></p>
+            </li>
+            <li>
+              <p>2016年10月4日 <a href="index.html">市電オリジナルグッズ　※函館の路面電車カレンダー2017※</a></p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="hide">
+            <li>
+              <p>2017年2月7日<a href="index.html">地域公共交通確保維持改善事業について</a></p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="hide">
+            <li>
+              <p>2017年8月3日 <a href="index.html">【企業局】条件付き一般競争入札による公告</a></p>
+            </li>
+            <li>
+              <p>2017年8月1日 <a href="index.html">【企業局】入札結果（平成２９年度）</a></p>
+            </li>
+            <li>
+              <p>2017年7月24日 <a href="index.html">函館市企業局経営懇話会</a></p>
+            </li>
+            <li>
+              <p>2017年6月1日 <a href="index.html">【企業局】入札・契約情報</a></p>
+            </li>
+            <li>
+              <p>2017年4月20日 <a href="index.html">【企業局】入札結果（平成２８年度）</a></p>
+            </li>
+            <li>
+              <p>2017年3月28日 <a href="index.html">函館市交通事業経営ビジョン</a></p>
+            </li>
+            <li>
+              <p>2017年3月28日 <a href="index.html">「函館市交通事業経営ビジョン（原案）」に対するパブリックコメント（意見公募）手続の実施について（募集期間：平成29年2月7日～3月9日＜募集期間終了しました＞）</a></p>
+            </li>
+            <li>
+              <p>2017年3月13日 <a href="index.html">【企業局】財政状況</a></p>
+            </li>
+            <li>
+              <p>2016年9月30日 <a href="index.html">企業局の事業概要</a></p>
+            </li>
+            <li>
+              <p>2016年4月21日 <a href="index.html">【企業局】入札結果（平成２５年度）</a></p>
+            </li>
+            <li>
+              <p>2016年4月21日 <a href="index.html">【企業局】入札結果（平成２６年度）</a></p>
+            </li>
+             <li>
+              <p>2016年4月21日 <a href="index.html">【企業局】入札結果（平成２７年度）</a></p>
+            </li>
+            <li>
+              <p>2016年3月24日 <a href="index.html">交通系ＩＣカードシステム導入業務のプロポーザル実施について</a></p>
+            </li>
+            <li>
+              <p>2015年2月19日 <a href="index.html">【企業局】軌道車輌（廃車車輌）の一般競争入札（売払い）の中止について</a></p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="hide">
+            <li>
+              <p>2017年8月3日 <a href="index.html">安全報告書（函館市電）</a></p>
+            </li>
+            <li>
+              <p>2017年7月26日 <a href="index.html">函館港まつり期間中の市電の運行について</a></p>
+            </li>
+            <li>
+              <p>2017年7月24日 <a href="index.html">函館港まつり期間中の花電車の運行について</a></p>
+            </li>
+            <li>
+              <p>2017年7月18日 <a href="index.html">「路面電車感謝祭」開催のお知らせについて</a></p>
+            </li>
+            <li>
+              <p>2017年7月4日 <a href="index.html">平成２９年度　カラオケビール電車「サッポロ生ビール号」運行開始</a></p>
+            </li>
+            <li>
+              <p>2017年6月23日 <a href="index.html">車両のご紹介（函館市電）</a></p>
+            </li>
+            <li>
+              <p>2017年6月23日 <a href="index.html">2017函館マラソン開催当日の市電の運行について</a></p>
+            </li>
+            <li>
+              <p>2017年4月6日 <a href="index.html">お得な乗車券（函館市電）</a></p>
+            </li>
+            <li>
+              <p>2017年2月15日 <a href="index.html">｢公立高等学校入学者選抜学力検査｣を受験する皆様へ</a></p>
+            </li>
+            <li>
+              <p>2016年12月16日 <a href="index.html">ICカード利用のお知らせ</a></p>
+            </li>
+            <li>
+              <p>2016年11月12日 <a href="index.html">新「中央病院前電停」供用開始のお知らせ</a></p>
+            </li>
+             <li>
+              <p>2016年10月4日 <a href="index.html">市電オリジナルグッズ　※函館の路面電車カレンダー2017※</a></p>
+            </li>
+            <li>
+              <p>2016年9月26日 <a href="index.html">市電ロケーションシステムの試行について（多言語対応）</a></p>
+            </li>
+            <li>
+              <p>2016年8月18日 <a href="index.html">乗車料金（函館市電）</a></p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <script type="text/javascript">
+	$(function() {
+	//クリックしたときのファンクションをまとめて指定
+	$('.tab li').click(function() {
+
+		//.index()を使いクリックされたタブが何番目かを調べ、
+		//indexという変数に代入します。
+		var index = $('.tab li').index(this);
+
+		//コンテンツを一度すべて非表示にし、
+		$('.content ul').css('display','none');
+
+		//クリックされたタブと同じ順番のコンテンツを表示します。
+		$('.content ul').eq(index).css('display','block');
+
+		//一度タブについているクラスselectを消し、
+		$('.tab li').removeClass('select');
+
+		//クリックされたタブのみにクラスselectをつけます。
+		$(this).addClass('select')
+	});
+});
+	</script>
+    </div>
+    <aside id="Twitter">
+      <p>公式twitter</p>
+      <a class="twitter-timeline" width="330px" height="280px" data-chrome="noheader nofooter"  href="https://twitter.com/hakodate_koutsu" data-widget-id="439300443076694017">@@hakodate_koutsu からのツイート</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </aside>
+    <div id="company">
+      <ul>
+        <li><a href="index.html">電車事業の取り組み</a></li>
+        <li><a href="index.html">企業局の事業運営</a></li>
+        <li><a href="index.html">事業者向け情報</a></li>
+        <li><a href="index.html">関連リンク集</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer>
+  <div id="fotter_navi">
+    <p>函館市電</p>
+    <p>〒042-0935 函館市駒場町15-1 TEL:0138-52-1273</p>
+    <p>営業時間:午前6時7分〜午後11時14分 (年中無休)</p>
+    <ul>
+      <li><a href="index.html">函館市のホムページについて</a></li>
+      <li><a href="index.html">著作権・免責事項・リンク</a></li>
+      <li><a href="index.html">プライバシーポリシー</a></li>
+      <li><a href="index.html">ホームページへのご意見・ご提案</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
