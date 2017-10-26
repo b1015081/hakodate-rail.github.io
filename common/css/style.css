@@ -449,9 +449,11 @@ color: #fff;
 	margin: 0px;
 	padding: 0;
 	width: 800px;
+	height: 360px;
 }
 .thumb-item img{
 	width: 800px;
+	height: 360px;
 	padding: 0;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
@@ -463,6 +465,7 @@ color: #fff;
 	position: relative;
 	margin-left: 0px;
 	width: 800px;
+	height: 80px;
 	padding: 0;
 	margin-top: 5px;
 	margin-bottom: 0px;
